@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* General CSS */
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+.navigations{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    font-weight: 500;
+}
+.logo{
+    cursor: pointer;
+}
+nav li{
+    display: inline-block;
+    margin: 0 2rem;
+    position: relative;
+}
+nav a{
+    color: #000;
+    text-decoration: none;
+}
+nav li::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #000;
+    transition: .5s;
+}
+nav li:hover::after{
+    width: 100%;
+}
+nav a:active, .logo:active{
+    color: grey;
+}
+
+main{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+.colored{
+    color: blue;
+}
+main .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.image img{
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+.text h1{
+    font-size: 2.5rem;
+}
+.hero-btn{
+    padding: 10px 15px;
+    font-weight: 500;
+    border: none;
+    background-color: blue;
+    border-radius: 10px;
+    color: #fff;
+    transition: .2s;
+}
+.hero-btn:hover{
+    background-color: rgba(0, 0, 255, 0.76);
+}
+.hero-btn:active{
+    transform: translateY(3px);
+}
